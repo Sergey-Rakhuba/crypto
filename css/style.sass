@@ -1,0 +1,1307 @@
+@import 'mixinLib'
+*
+   margin: 0
+   padding: 0
+
+html
+   height: 100%
+body
+   width: 100vw
+   overflow-x: hidden
+   height: 100%
+   .global-block
+
+      background-image: url("/img/LandingPage.jpg")
+      background-image: url("https://sergey-rakhuba.github.io/Crypto/img/LandingPage.jpg")
+      background-size: cover
+      display: flex
+      flex-direction: column
+      min-width: 100vw
+      mx-width: 100vw
+      min-height: 100%
+      z-index: -1
+      header
+         .header__block
+            padding: 32px 8.33vw
+            overflow: hidden
+            .container
+               display: flex
+               flex-direction: row
+               justify-content: space-between
+            .logo
+               margin-right: 16px
+               font-family: Inter
+               @include adaptiv-font (24, 18)
+               font-style: italic
+               font-weight: 800
+               line-height: 100%
+               background: var(--liner, linear-gradient(90deg, #007ADF 0%, #00ECBC 100%))
+               background-clip: text
+               -webkit-background-clip: text
+               -webkit-text-fill-color: transparent
+            .burger-menu
+               display: none
+            .menu
+               margin: auto 0
+               display: block
+               ul li
+                  display: inline-block
+                  a
+                     cursor: pointer
+                     color: var(--d-ark-blue, #024795)
+                     font-family: Inter
+                     @include adaptiv-font (16, 14)
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+                     margin-right: 20px
+                     text-decoration: none
+
+            .langue-select
+               margin-right: 16px
+               display: flex
+               flex-direction: column
+               cursor: pointer
+               color: var(--d-ark-blue, #024795)
+               font-family: Inter
+               @include adaptiv-font (16, 14)
+               font-style: normal
+               font-weight: 600
+               line-height: 100%
+               justify-content: center
+               align-items: center
+            .header__block-button
+               display: flex
+               flex-direction: row
+               flex-wrap: nowrap
+               justify-content: space-between
+               //max-width:
+               .button-enter
+
+                  button
+                     cursor: pointer
+                     display: flex
+                     width: 6.67vw
+                     padding: 18px 69.5px 18px 70.5px
+                     justify-content: center
+                     align-items: center
+                     margin-right: 16px
+                     border-radius: 8px
+                     border: 1px solid var(--middle-green, #00D190)
+                     color: var(--middle-green, #00D190)
+                     background: none
+                     text-align: center
+                     font-family: Inter
+                     @include adaptiv-font (20, 14)
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+
+                     &:active, &:hover, &:focus
+                        border: 1px solid var(--middle-green, #00D190)
+                        background: var(--middle-green, #00D190)
+                        color: var(--white, #FFF)
+                     img
+                        display: none
+
+                  @media ( max-width: 1300px )
+                     button
+                        width: 60px
+                        height: auto
+                        padding: 19px 0
+                        img
+                           display: block
+                        span
+                           display: none
+               .button-replenish-remove
+                  button
+                     white-space: nowrap
+                     flex-wrap: nowrap
+                     cursor: pointer
+                     display: flex
+                     width: 265px
+                     padding: 20px 30px 16px 31px
+                     justify-content: center
+                     align-items: center
+                     border-radius: 8px
+                     border: 1px solid var(--middle-green, #00D190)
+                     color: var(--middle-green, #00D190)
+                     background: none
+                     text-align: center
+                     font-family: Inter
+                     @include adaptiv-font (20, 14)
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+                     &:active, &:hover, &:focus
+                        border: 1px solid var(--middle-green, #00D190)
+                        background: var(--middle-green, #00D190)
+                        color: var(--white, #FFF)
+                     img
+                        width: 34px
+                        height: auto
+                        display: none
+                  @media ( max-width: 1300px )
+                     button
+                        width: 60px
+                        img
+                           display: block
+                        span
+                           display: none
+
+      main
+         flex: 1 1 auto
+         display: flex
+         flex-direction: column
+         .crypto-money-block
+            position: relative
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            padding: 0 50px
+            @media ( max-width: 1300px  )
+               flex-direction: column
+
+            .crypto-money-block__pl-card
+               margin-top: 100px
+               position: relative
+               @media ( max-width: 1300px  )
+                  display: none
+               .balance-block
+                  position: absolute
+                  top: 30%
+                  left: 7%
+                  .balance
+                     color: var(--white, #FFF)
+                     font-family: Inter
+                     font-size: 46.743px
+                     font-style: normal
+                     font-weight: 700
+                     line-height: 130%
+                     span
+                        margin-left: 24px
+                        color: var(--white, #FFF)
+                        font-family: Inter
+                        font-size: 19.866px
+                        font-style: normal
+                        font-weight: 800
+                        line-height: 100%
+               .crypto-money-block__check-flex-container
+                  position: absolute
+                  top: 150px
+                  left: 40px
+                  z-index: 5
+                  display: flex
+                  flex-direction: column
+                  width: 827px
+                  height: auto
+                  border-radius: 8px
+                  background: var(--white, #FFF)
+                  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10)
+                  .flex-block-row
+                     display: flex
+                     flex-direction: row
+                     flex-wrap: wrap
+                     justify-content: space-around
+                     flex: 1 1 auto
+                     margin: 11px 16px
+                     h3, h4, h5, p
+                        display: flex
+                        flex-direction: column
+                        margin: auto 0
+                        span
+                           color: var(--grey, #8B8B8B)
+
+                           font-family: Inter
+                           font-size: 12px
+                           font-style: normal
+                           font-weight: 400
+                           line-height: 16px
+                     h3
+                        color: var(--d-ark-blue, #024795)
+                        font-family: Inter
+                        font-size: 18px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 24px
+                     select
+                        border: none
+
+                     h5
+                        color: var(--middle-green, #00D190)
+                        font-family: Inter
+                        font-size: 12px
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 16px
+                     p
+                        color: var(--black, #00070B)
+                        font-family: Inter
+                        font-size: 12px
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 16px
+            .deposit-block
+               width: 296px
+               padding: 16px 20px
+               display: flex
+               flex-direction: column
+               flex-wrap: nowrap
+               border-radius: 8px
+               background: var(--lighting, linear-gradient(52deg, #ddf4ff70 0%, #fdf0ff79 100%))
+               @media ( max-width: 1300px  )
+                  justify-content: center
+                  margin: 0 auto
+               #img-info
+                  cursor: pointer
+                  position: relative
+                  width: 100%
+                  height: 69px
+                  margin-top: 16px
+                  img
+                     //display: none
+                     visibility: hidden
+                     opacity: 0
+                     transition: 0.6s
+                     z-index: 1
+                     position: absolute
+                  #set-sum
+                     position: absolute
+                     top: 10px
+                     margin-left: 25px
+                     color: #ffffff
+                     background: none
+                     border: none
+                     z-index: 100
+                     font-size: 20px
+                     visibility: hidden
+                     opacity: 0
+                     transition: 0.6s
+                     &:focus, &:focus, &:active
+                        border: none
+                        outline: none !important
+
+               .guruweba_example_range
+                  cursor: pointer
+                  //&::-webkit-slider-runnable-track
+                  //   background: var(--lighting, linear-gradient(52deg, #d6f990 0%, #162002 100%))
+                  &::-webkit-slider-thumb
+                     width: 2em
+                     height: 2em
+                     border-radius: 50%
+                     border: 9px solid #D3D3D3
+                     box-shadow: 2px 2px 2px #000000
+               &:active, &:hover, &:focus
+                  #img-info
+                     img, #set-sum
+                        //display: block
+                        visibility: visible
+                        opacity: 1
+                        transition: 0.6s
+               .flex-block-row
+                  padding: 0 5px
+                  margin-top: 6px
+                  display: flex
+                  flex-direction: row
+                  justify-content: space-between
+                  select
+                     cursor: pointer
+                     display: flex
+                     width: 120px
+                     height: 48px
+                     text-align: center
+                     gap: 10px
+                     border-radius: 8px
+                     background: var(--white, #FFF)
+                     color: var(--middle-green, #00D190)
+                     font-family: Inter
+                     font-size: 16px
+                     font-style: normal
+                     font-weight: 400
+                     line-height: normal
+                     padding-right: 10px
+                  span
+                     margin: auto 0
+               p
+                  width: 250px
+                  flex-shrink: 0
+                  color: var(--black, #00070B)
+                  text-align: center
+                  font-family: Inter
+                  font-size: 14px
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 100%
+                  margin: 0 auto
+                  margin-top: 16px
+               .line
+                  //border-top: 2px solid #007ADF
+                  margin-top: 16px
+                  height: 2px
+                  background: linear-gradient(42deg, #007ADF 0%, #00ECBC 100%)
+               button
+                  cursor: pointer
+                  margin-top: 16px
+                  color: var(--white, #FFF)
+                  text-align: center
+                  font-family: Inter
+                  font-size: 20px
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 100%
+                  display: flex
+                  padding: 18px 64px 18px 65px
+                  justify-content: center
+                  align-items: center
+                  border-radius: 8px
+                  background: linear-gradient(42deg, #007ADF 0%, #00ECBC 100%)
+                  border: none
+                  &:active, &:hover, &:focus
+                     background: linear-gradient(42deg,#00ECBC 0%,#007ADF 100%)
+                     color: #ad1212
+         .money-flex-section
+            display: flex
+            max-width: 690px
+            width: 100%
+            margin: 320px 0 0 0
+            align-items: center
+            float: right
+            margin-right: 5vw
+            @media ( max-width: 1300px  )
+               width: 100vw
+               float: none
+               .container
+                  margin: 0 auto
+
+            .container
+               display: flex
+               flex-direction: column
+               flex-wrap: nowrap
+
+               height: auto
+               flex-shrink: 0
+
+               h1
+                  color: var(--d-ark-blue, #024795)
+                  font-family: Inter
+                  font-size: 64px
+                  font-style: normal
+                  font-weight: 800
+                  line-height: normal
+
+               .coin__color-block
+                  border-radius: 8px
+                  opacity: 0.91
+                  margin: 16px 0 0 0
+                  border-radius: 8px
+                  display: flex
+                  flex-direction: row
+                  flex-wrap: nowrap
+                  position: relative
+                  background: linear-gradient(30deg, #10439a, #92f59c)
+                  max-width: 690px
+                  width: 47.91vw
+                  min-width: 478px
+                  height: 124px
+                  flex-shrink: 0
+                  padding: 24px 0 0 32px
+                  @media ( max-width: 992px )
+
+                     height: auto
+                     flex-wrap: wrap
+                     padding: 16px
+                     justify-content: center
+                  .button-record
+                     margin-top: 32px
+                  .balance-block
+                     span
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 20px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+                     h2
+                        margin: 0 0 0 0
+                        margin: 0 auto
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 40px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 130%
+                        span
+                           margin: 0 !important
+                           margin-left: 7px
+                           color: var(--light-green, #C7F9CC)
+                           font-family: Inter
+                           font-size: 20px
+                           font-style: normal
+                           font-weight: 600
+                           line-height: 100%
+
+                     .balance
+                        margin: 16px 16px 16px 0
+
+                  @media ( max-width: 520px )
+                     min-width: 300px
+                     max-width: 100vw
+                     width: 93%
+                     .button-record
+                        margin: auto 10px auto 0
+                     .balance-block
+                        display: flex
+                        flex-direction: column
+                        margin: auto 0
+
+                     span
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 20px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 20px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+                        margin: auto 56px 0 32px
+                     .balance
+                        margin: 16px 56px 0 32px
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 40px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 130%
+                        span
+                           color: var(--light-green, #C7F9CC)
+                           font-family: Inter
+                           font-size: 20px
+                           font-style: normal
+                           font-weight: 600
+                           line-height: 100%
+
+                  .button-record
+                     button
+                        display: flex
+                        max-width: 228px
+                        width: 15.8vw
+                        min-width: 145px
+                        padding: 20px 0px 16px 0px
+                        justify-content: center
+                        align-items: center
+                        flex-shrink: 0
+                        border-radius: 8px
+                        border: 1px solid #fff
+                        background: none
+                        color: #FFF
+                        text-align: center
+                        font-family: Inter
+                        font-size: 20px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+                        &:active, &:hover, &:focus
+                           border: 1px solid var(--middle-green, #00D190)
+                           background: var(--middle-green, #00D190)
+                           color: var(--white, #FFF)
+               .bl
+                  position: absolute
+                  right: 60px
+                  margin-top: 170px
+                  z-index: 50
+                  p
+
+                     filter: blur(2rem)
+               .coin-information
+                  margin: 16px 0
+                  float: right
+                  display: flex
+                  flex-direction: row
+                  flex-wrap: wrap
+                  max-width: 430px
+                  padding: 24px
+                  align-items: flex-start
+                  justify-content: space-between
+                  border-radius: 8px
+                  background: var(--white, #FFF)
+                  @media ( max-width: 520px)
+                     flex-direction: column
+
+                  p
+                     margin: 8px 0
+                     max-width: 190px
+                     display: block
+                     flex: 1 1 45%
+                     span
+                        margin-left: 8px
+               .select-check
+                  display: flex
+                  flex-direction: row
+                  flex-wrap: wrap
+                  justify-content: space-between
+                  height: 56px
+                  padding: 0 24px
+                  align-items: center
+                  gap: 4px
+                  flex-shrink: 0
+                  align-self: stretch
+                  max-width: 430px
+                  border-radius: 8px
+                  background: var(--white, #FFF)
+                  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+               .sum-out
+                  margin: 16px 0
+                  max-width: 430px
+                  display: flex
+                  height: 56px
+                  padding: 0 24px
+                  align-items: center
+                  gap: 4px
+                  flex-shrink: 0
+                  align-self: stretch
+                  border-radius: 8px
+                  border: 1px solid var(--middle-green, #00D190)
+                  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+                  label
+                     display: flex
+                     flex-direction: row
+                     color: var(--black, #00070B)
+                     font-family: Inter
+                     font-size: 16px
+                     font-style: normal
+                     font-weight: 400
+                     line-height: 24px
+                     align-items: center
+                  input
+                     margin-left: 5px
+                     max-width: 80%
+                     width: 100%
+                     border: none
+                     background: none
+                     margin-top: 3px
+                     &:focus, &:focus, &:active
+                        border: none
+                        outline: none !important
+
+               button
+                  display: flex
+                  max-width: 480px
+                  width: 93%
+                  color: var(--white, #FFF)
+                  font-size: 20px
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 100%
+                  padding: 20px 0px 16px 0px
+                  justify-content: center
+                  align-items: center
+                  flex-shrink: 0
+                  border-radius: 8px
+                  border: 1px solid var(--middle-green, #00D190)
+                  background: var(--middle-green, #00D190)
+
+         .inwest
+            width: 100vw
+            //position: relative
+            margin: 320px auto
+
+            h1
+               text-align: center
+               @include adaptiv-font (50, 32)
+               color: var(--d-ark-blue, #024795)
+               font-family: Inter
+               font-size: 50px
+               font-style: normal
+               font-weight: 900
+               line-height: 130%
+
+            p
+               display: flex
+               flex-direction: row
+               flex-wrap: wrap
+               color: var(--black, #00070B)
+               text-align: center
+               font-family: Rubik
+               font-size: 24px
+               font-style: normal
+               font-weight: 400
+               line-height: normal
+               justify-content: center
+               margin: 24px auto 40px auto
+               opacity: 0.6000000238418579
+               span
+                  opacity: 0.9 !important
+                  margin-left: 16px
+                  margin-top: 3px
+                  opacity: 0.6000000238418579
+                  color: var(--middle-green, #00D190)
+                  font-family: Inter
+                  font-size: 24px
+                  font-style: normal
+                  font-weight: 700
+                  line-height: 100%
+               svg
+                  margin-top: 3px
+         .money-carg-container
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: center
+            .money-carg
+               max-width: 382px
+               width: 100%
+               border-radius: 8px
+               background: var(--white, #FFF)
+               box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10)
+               max-width: 382px
+               padding: 16px
+               display: flex
+               flex-direction: row
+               justify-content: space-between
+               margin: 12px
+               .icon-val
+                  display: flex
+                  flex-direction: row
+                  justify-content: space-around
+                  align-items: center
+                  svg
+                     margin-right: 5px
+                  .name-val
+                     margin: 0
+                     display: flex
+                     flex-direction: column
+                     flex-wrap: nowrap
+                     color: var(--black, #00070B)
+                     font-family: Inter
+                     font-size: 14px
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+                     span
+                        color: var(--grey, #8B8B8B)
+                        font-family: Inter
+                        font-size: 12px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 16px
+               .curs-val
+                  display: flex
+                  flex-direction: column
+                  justify-content: space-around
+                  align-items: center
+                  color: var(--black, #00070B)
+                  text-align: right
+                  font-family: Inter
+                  font-size: 12px
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 16px
+                  span
+                     color: var(--grey, #8B8B8B)
+                     font-family: Inter
+                     font-size: 12px
+                     font-style: normal
+                     font-weight: 400
+                     line-height: 16px
+               button
+                  border-radius: 8px
+                  background: var(--middle-green, #00D190)
+                  display: inline-flex
+                  height: 40px
+                  padding: 12px 13px
+                  justify-content: center
+                  align-items: center
+                  flex-shrink: 0
+                  border: none
+                  color: var(--white, #FFF)
+                  text-align: center
+                  @include adaptiv-font (16, 14)
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 100%
+         .swipper-block
+            width: 90vw
+            position: relative
+            margin: 320px auto
+            margin-left: 6%
+            h1
+               text-align: left
+               @include adaptiv-font (50, 32)
+               color: var(--d-ark-blue, #024795)
+               font-family: Inter
+               font-size: 50px
+               font-style: normal
+               font-weight: 900
+               line-height: 130%
+               margin-bottom: 68px
+            .swipper-os
+               overflow: hidden
+               .swiper-wrapper
+                  margin: 0 auto
+                  .swiper-slide
+                     cursor: pointer
+
+                     .container
+                        position: relative
+                        max-width: 352px
+                        width: 100%
+                        height: 374px
+                        flex-shrink: 0
+                        margin-top: 50px
+                        background: #eeecec69
+                        padding: 0 30px
+                        .flex-block
+                           display: flex
+                           flex-direction: row
+                           align-items: center
+                           img
+                              margin-right: 16px
+                           .title-slide
+                              color: var(--black, #00070B)
+                              font-family: Inter
+                              font-size: 32px
+                              font-style: normal
+                              font-weight: 600
+                              line-height: 130%
+                           p
+                              color: var(--black, #00070B)
+                              font-family: Inter
+                              font-size: 16px
+                              font-style: normal
+                              font-weight: 400
+                              line-height: 150%
+                              opacity: 0.6000000238418579
+                              max-width: 277px
+                              display: flex
+                              flex-wrap: wrap
+                  .swiper-slide-active
+                     .container
+                        border-radius: 8px
+                        background: linear-gradient(1deg, #007ADF 0%, #00ECBC 100%)
+
+                        img
+                           display: none
+                        .flex-block
+                           display: flex
+                           flex-direction: column
+                           text-align: center
+                           img
+                              //position: absolute
+                              margin-top: -40px
+                              display: block
+                              zoom: 130%
+                           .title-slide
+                              color: var(--white, #FFF)
+                        p
+                           margin: 0 auto
+                           margin-top: 16px
+                           max-width: 277px
+                           width: 93%
+                           color: var(--white, #FFF)
+                           font-family: Inter
+                           font-size: 16px
+                           font-style: normal
+                           font-weight: 400
+                           line-height: 150%
+                           display: flex
+                           flex-direction: column
+                           flex-wrap: wrap
+
+         .friends-flex-container
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            width: 95vw
+            justify-content: center
+            height: auto
+            margin: 72px 0
+            margin-top: 320px
+            .friends-flex-block
+               padding: 40px
+               display: flex
+               flex-direction: column
+               justify-content: center
+               align-items: center
+               h1
+                  color: var(--d-ark-blue, #024795)
+                  font-family: Inter
+                  @include adaptiv-font (50, 32)
+                  font-style: normal
+                  font-weight: 900
+                  line-height: 130%
+                  margin-bottom: 20px
+
+                  text-align: left
+                  text-align: left
+               p
+                  color: var(--black, #00070B)
+                  font-family: Inter
+                  @include adaptiv-font (20, 16)
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 150%
+                  margin-bottom: 20px
+                  align-items: center
+                  text-align: left
+               .flex-comand
+                  display: flex
+                  flex-direction: row
+                  align-items: left
+                  margin-bottom: 40px
+                  img
+                     width: 72px
+                     height: 72px
+                     flex-shrink: 0
+                     margin-right: 16px
+                  span
+
+                     color: var(--black, #00070B)
+                     font-family: Inter
+                     @include adaptiv-font (16, 14)
+                     font-style: normal
+                     font-weight: 400
+                     line-height: 150%
+               button
+                  cursor: pointer
+                  color: var(--middle-green, #00D190)
+                  text-align: center
+                  font-family: Inter
+                  font-size: 20px
+                  font-style: normal
+                  font-weight: 600
+                  line-height: 100%
+                  border-radius: 8px
+                  border: 2px solid var(--middle-green, #00D190)
+                  display: flex
+                  padding: 18px 116px 18px 115px
+                  justify-content: center
+                  align-items: center
+                  &:active, &:hover, &:focus
+                     border: 1px solid var(--middle-green, #00D190)
+                     background: var(--middle-green, #00D190)
+                     color: var(--white, #FFF)
+               .friends-flex-element
+                  display: flex
+                  flex-direction: row
+                  flex-wrap: nowrap
+                  justify-content: space-between
+                  .button
+                     &:active, &:hover, &:focus
+                        border: 1px solid var(--middle-green, #00D190)
+                        background: var(--middle-green, #00D190)
+                        color: var(--white, #FFF)
+                  .block
+                     h3
+                        margin-right: 34px
+                        margin-top: 10px
+                        color: var(--black, #00070B)
+                        text-align: center
+                        font-family: Inter
+                        @include adaptiv-font (28, 16)
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+                     h1
+                        margin-top: 10px
+                        color: var(--middle-green, #00D190)
+                        text-align: center
+                        font-family: Inter
+                        @include adaptiv-font (48, 32)
+                        font-style: normal
+                        font-weight: 900
+                        line-height: 130%
+                     img
+                        width: 180px
+                        height: 180px
+                        flex-shrink: 0
+               a
+                  text-decoration: none
+                  color: var(--black, #00070B)
+                  font-family: Inter
+                  @include adaptiv-font (16, 14)
+                  font-style: normal
+                  font-weight: 400
+                  line-height: 150%
+                  display: flex
+                  height: 80px
+                  padding: 16px 24px
+                  align-items: center
+                  gap: 4px
+                  flex-shrink: 0
+                  align-self: stretch
+                  border-radius: 8px
+                  background: var(--white, #FFF)
+                  margin: 26px 0 24px 0
+                  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+                  color: var(--d-ark-blue, #024795)
+                  hyphens: auto
+                  cursor: pointer
+               .section-social
+                  display: flex
+                  flex-direction: column
+
+                  span
+                     margin-top: 40px
+                     text-align: center
+                     font-family: Inter
+                     @include adaptiv-font (16, 14)
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+                  .block-social
+                     img
+                        margin: 12px
+
+         .partners-title
+            max-width: 920px
+            color: var(--d-ark-blue, #024795)
+            text-align: center
+            font-family: Inter
+            @include adaptiv-font (64, 24)
+            font-style: normal
+            font-weight: 800
+            line-height: normal
+            margin: 0 auto
+            margin-bottom: 56px
+         .partners-flex-box
+            max-width: 90vw
+            margin: 0 auto
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-around
+            margin-bottom: 276px
+            .partners-flex-element
+               cursor: pointer
+               margin: 13px
+               flex: 1 1 24%
+               display: flex
+               flex-direction: column
+               text-align: center
+               justify-content: center
+
+               width: 322px
+               height: 140px
+               flex-shrink: 0
+
+               border-radius: 10px
+               background: var(--white, #FFF)
+               &:active, &:hover, &:focus
+                  border-radius: 10px
+                  background: var(--light-liner, linear-gradient(52deg, #C7F9CF 0%, #FDF0FF 100%))
+               img
+                  margin: auto
+                  max-width: 140px
+
+      .footer__block
+         background: var(--d-ark-blue, #024795)
+         backdrop-filter: blur(5px)
+         width: 100vw
+         height: auto
+         .footer__block-flex-column
+            padding: 64px 8.33vw
+            display: flex
+            flex-direction: column
+            .footer__block-flex-row
+               display: flex
+               flex-direction: row
+               flex-wrap: wrap
+               justify-content: space-between
+               .footer_logo
+                  font-family: Inter
+                  font-size: 40px
+                  font-style: italic
+                  font-weight: 800
+                  line-height: 100%
+                  background: var(--liner, linear-gradient(90deg, #007ADF 0%, #00ECBC 100%))
+                  background-clip: text
+                  -webkit-background-clip: text
+                  -webkit-text-fill-color: transparent
+               .footer__menu
+                  display: grid
+                  grid-template-columns: repeat(2, 1fr)
+                  grid-auto-rows: 44px
+                  margin: auto 0
+                  align-items: center
+                  padding: 13% 0
+                  .footer__menu-flex-element
+
+                     a
+
+                        text-decoration: none
+                        color: var(--light-green, #C7F9CC)
+                        font-family: Inter
+                        font-size: 20px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 100%
+               .footer__block-flex-column
+                  padding: 0 0 0 7vw
+                  .footer__block-title
+                     color: var(--white, #FFF)
+                     font-family: Inter
+                     font-size: 20px
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+                  label
+                     display: flex
+                     flex-direction: row
+                     color: var(--white, #FFF)
+                     font-family: Inter
+                     font-size: 16px
+                     font-style: normal
+                     font-weight: 400
+                     line-height: 150%
+                     border-radius: 8px
+                     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+                     margin: 16px 0 0 0
+                     border: 1px solid rgba(0, 0, 0, 0.05)
+                     align-items: center
+                     padding-left: 16px
+
+                  input
+                     max-width: 80%
+                     width: 100%
+                     border: none
+                     padding-left: 10px
+                     cursor: pointer
+                     display: flex
+                     height: 36px
+                     background: none
+                     align-items: center
+                     flex-shrink: 0
+                     align-self: stretch
+                     color: var(--white, #FFF)
+                     font-family: Inter
+                     font-size: 16px
+                     font-style: normal
+                     font-weight: 400
+                     line-height: 150%
+                     &:focus, &:focus, &:active
+                        border: none
+                        outline: none !important
+
+                  .button-consultation
+                     cursor: pointer
+                     margin: 16px 0 0 0
+                     display: flex
+                     max-width: 480px
+                     padding: 20px 0px 16px 0px
+                     justify-content: center
+                     align-items: center
+                     flex-shrink: 0
+                     border-radius: 8px
+                     border: 1px solid var(--middle-green, #00D190)
+                     background: var(--middle-green, #00D190)
+                     color: var(--white, #FFF)
+                     text-align: center
+                     font-family: Inter
+                     font-size: 20px
+                     font-style: normal
+                     font-weight: 600
+                     line-height: 100%
+         .footer__block-company
+            display: flex
+            justify-content: center
+            margin: 0 auto
+            span
+               padding-bottom: 40px
+               color: var(--white, #FFF)
+               font-family: Inter
+               font-size: 12px
+               font-style: normal
+               font-weight: 400
+               line-height: 16px
+   //.burger-menu
+   //   display: none
+   .burger-menu.active
+      display: block
+   .burger-menu__body.active
+      position: absolute !important
+      overflow: hidden
+      top: 0
+      left: 0
+      background: #fbf9f9
+      color: #000
+      width: 100vw
+      height: 100vh
+      display: block
+      z-index: 1000
+      .close-burger-btn
+         position: relative
+         top: 20px
+         left: 90%
+
+         font-size: 60px
+         color: #000
+      .overlay-content
+         position: relative
+         top: 200px
+
+         li
+            margin: 16px 0 0 30vw
+            text-aling: center
+            a
+
+               text-decoration: none
+               font-size: 45px
+   .burger-menu__body
+      display: none
+   .modal-enter, .modal-reg
+      display: none
+   .modal-enter.active, .modal-reg.active
+      background-image: url("/img/Desktop - 1.png")
+      background-size: cover
+      background-repeat: no-repeat
+      position: fixed
+      top: 0
+      left: 0
+      width: 100vw
+      //height: auto
+      height: 100%
+      z-index: 10000
+      display: flex
+      overflow-y: scroll
+
+      .modal-body
+         position: relative
+         display: flex
+         max-width: 592px
+         width: 100%
+         height: 820px
+         border-radius: 8px
+         background: linear-gradient(27deg, #FDF0FF 0%, #DDF4FF 98.11%)
+         padding: 56px
+         margin: 102px auto
+         @media screen and ( max-width: 680px)
+            margin: 16px
+            padding: 16px
+         #close-enter-button, #close-reg-button
+            position: absolute
+            top: 24px
+            right: 24px
+         .container
+            display: flex
+            flex-direction: column
+            width: 100%
+            h1
+               box-sizing: border-box
+               text-align: center
+               margin-bottom: 40px
+               color: var(--d-ark-blue, #024795)
+               text-align: center
+               font-family: Inter
+               font-size: 50px
+               font-style: normal
+               font-weight: 900
+               line-height: 130%
+
+            label
+               position: relative
+               margin-top: 24px
+               color: var(--black, #00070B)
+               font-family: Inter
+               font-size: 28px
+               font-style: normal
+               font-weight: 600
+               line-height: 100%
+               svg
+                  position: absolute
+                  top: 60px
+                  right: 24px
+
+            input
+               cursor: pointer
+               box-sizing: border-box
+               width: 100%
+               height: 56px
+               border-radius: 8px
+               border: 1px solid var(--middle-green, #00D190)
+               box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)
+               padding: 16px 24px
+               margin: 16px 0 8px 0
+               color: var(--grey, #8B8B8B)
+               font-family: Inter
+               font-size: 16px
+               font-style: normal
+               font-weight: 400
+               line-height: 24px
+               background: none
+               &:focus, &:focus, &:active
+                  border: 1px solid var(--middle-green, #00D190)
+                  outline: none !important
+
+            a
+               cursor: pointer
+               text-align: right
+               margin: 24px 0
+               color: var(--middle-green, #00D190)
+               font-family: Inter
+               font-size: 20px
+               font-style: normal
+               font-weight: 600
+               line-height: 100%
+            button
+               cursor: pointer
+               border-radius: 8px
+               border: 1px solid var(--middle-green, #00D190)
+               height: 56px
+               margin-bottom: 16px
+               color: var(--middle-green, #00D190)
+               text-align: center
+               font-family: Inter
+               font-size: 20px
+               font-style: normal
+               font-weight: 600
+               background: none
+               line-height: 100%
+               &:active, &:hover, &:focus
+                  border: 1px solid var(--middle-green, #00D190)
+                  background: var(--middle-green, #00D190)
+                  color: var(--white, #FFF)
+            .home-page
+               margin-top: 24px
+               text-align: center
+               font-family: Inter
+               font-size: 20px
+               font-style: normal
+               font-weight: 600
+               line-height: 100%
+               background: var(--liner, linear-gradient(90deg, #007ADF 0%, #00ECBC 100%))
+               background-clip: text
+               -webkit-background-clip: text
+               -webkit-text-fill-color: transparent
+         .flex-block-icon-input
+            position: relative
+            display: flex
+            flex-direction: row
+            input
+               padding-left: 60px
+            svg
+               position: absolute
+               top: 30px
+               left: 24px
+            .ieg
+               position: absolute
+
+               right: 24px !important
+@media ( max-width: 992px )
+   body
+      .global-block
+         header
+            .header__block
+               .menu
+                  display: none
+               .burger-menu
+                  display: flex
+                  flex-direction: column
+                  .open-burger-btn
+                     margin: auto 0
+                     @include adaptiv-font (24, 18)
+                     color: #024795
