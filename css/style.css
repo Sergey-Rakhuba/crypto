@@ -1798,7 +1798,7 @@ body .burger-menu__body.active .overlay-content li a {
 body .burger-menu__body {
   display: none;
 }
-body .modal-enter, body .modal-reg {
+body .modal-enter, body .modal-reg, body .modal-remember {
   display: none;
 }
 body .modal-enter.active, body .modal-reg.active {
