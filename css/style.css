@@ -14,7 +14,7 @@ body {
 }
 body .global-block {
   background-image: url("/img/LandingPage.jpg");
-  background-image: url("https://sergey-rakhuba.github.io/Crypto/img/LandingPage.jpg");
+  background-image: url("https://sergey-rakhuba.github.io/crypto/img/LandingPage.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1802,7 +1802,7 @@ body .modal-enter, body .modal-reg {
   display: none;
 }
 body .modal-enter.active, body .modal-reg.active {
-  background-image: url("/img/Desktop - 1.png");
+  background-image: url("https://sergey-rakhuba.github.io/crypto/img/Desktop - 1.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
